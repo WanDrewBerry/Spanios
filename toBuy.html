@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Buy</title>
+    <link rel="stylesheet" href="toBuy.css">
+</head>
+<body>
+<div class="container">
+    <div class="to-buy">
+        <h2>To Buy List <img src="images/notepad.png" alt=""></h2>
+        <div class="row">
+            <form action="">
+            <input type="text" id="inputItem" placeholder="Item">
+            <select name="Qty" id="inputQty">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            <input type="number" id="inputBudget" name="budget" placeholder="Budget">
+            <button id="addButton">Add</button>
+            </form>
+        </div>
+
+        <ul id="listContainer" >
+            <!-- <li class="checked">task 1</li>
+            <li>task 2</li>
+            <li>task 3</li> -->
+        </ul>
+
+    </div>
+</div>
+    
+
+<script src="toBuy.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppings, sans-serif";
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#bafc03,#fc03d7,#c9207a);
+    padding: 100px;
+}
+
+.to-buy{
+    width: 50%;
+    max-width: 600px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* .to-buy h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+.to-buy h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+
+.to-buy h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 5px;
+    margin-bottom: 2rem;
+}
+
+#inputItem{
+    flex: 0;
+    border-radius: 20px;
+    background: transparent;
+    padding: 0.6rem;
+    border-color: #fff;
+}
+#inputQty{
+    border-radius: 20px;
+    background: transparent;
+    padding: 0.6rem;
+    margin: 0.5rem;
+    border-color: #fff;
+}
+#inputBudget{
+    width: 100px;
+    flex: 0;
+    border-radius: 20px;
+    background: transparent;
+    padding: 0.6rem;
+    border-color: #fff;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    background: #077fe8;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-left: 2.5rem;
+}
+
+.to-buy ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 15px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative; /* because we added position absolute in before, then we add relative position here*/    
+}
+
+
+.to-buy ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    position: absolute;
+}
+
+.to-buy ul li.checked{
+    color: #8ac900;
+    text-decoration: line-through;
+
+}
+
+.to-buy ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+.to-buy ul li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0.8;
+    
+}
+
+.to-buy ul li img{
+    position: absolute;
+    right: 0;
+    top: 17px;
+    width: 20px;
+    height: 15px;
+    margin-right: 35px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.to-buy ul li img:hover{
+    background-color: #edeef0;
+    opacity: 1;
+    width: 25px;
+    height: 20px;
+    margin-right: 33px;
+    top: 14px;
+}
+
+.to-buy ul li span:hover{
+    background: #edeef0;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 33px;
+    opacity: 1;
+    
+}
