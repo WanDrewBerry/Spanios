@@ -59,17 +59,16 @@ listContainer.addEventListener('click', function(e){
     }
     // TO EDIT THE ITEM
     else if(e.target.tagName === 'IMG'){
-        
-           let edit = e.target.parentElement.contentEditable = true;
-           edit.focus()
-        }
-    
-       
-    //     let newTextField = e.target.parentElement;
-    //     let newInputField = document.createElement('input');
-    //     newTextField.appendChild(newInputField); 
-    //     e.target.parentElement.value.remove();
-    // }
+        // const listItem = e.target.parentElement;
+        // listItem.contentEditable = true;
+        // listItem.style.backgroundColor = '#dddbdb';
+        const listItem = e.target.parentElement;
+        const itemText = listItem.textContent;
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.value = itemText;
+        listItem.appendChild(inputField);
+    }
             
 })
 
